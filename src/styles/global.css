@@ -1,0 +1,13 @@
+/* eslint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* eslint-enable */
+
+:root {
+  --primaryColor: #2999fd; /* clear blue*/
+  --secondaryColor: #0e3585; /* dark blue*/
+  --whiteColor: #ffffff; /* white*/
+  --blackColor: #000000; /* black*/
+  --fontColor: #6b6464;
+}
