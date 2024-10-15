@@ -12,7 +12,7 @@ Ce projet est un boilerplate React moderne créé pour servir comme base pour de
 - **shadcn/ui** : Collection de composants React réutilisables et accessibles.
 - **Jest & React Testing Library** : Outils pour les tests unitaires et de composants.
 - **ESLint & Prettier** : Outils pour maintenir un code propre et cohérent.
-- **Husky** : Outil pour exécuter des scripts (comme des linters) avant les commits.
+- **Husky & lint-staged** : Outils pour exécuter des scripts (comme des linters) avant les commits et vérifier les fichiers stagés.
 - **react-i18next** : Solution d'internationalisation pour React.
 - **Axios** : Client HTTP basé sur les promesses pour le navigateur et node.js.
 - **React Hook Form** : Bibliothèque performante pour la gestion des formulaires.
@@ -27,7 +27,7 @@ Ce projet est un boilerplate React moderne créé pour servir comme base pour de
 - Styling avec Tailwind CSS et composants shadcn/ui
 - Tests unitaires et de composants
 - Linting et formatting automatiques
-- Hooks de pré-commit pour assurer la qualité du code
+- Hooks de pré-commit avec Husky et lint-staged pour assurer la qualité du code
 - Support multilingue avec react-i18next
 - Gestion des requêtes HTTP avec Axios
 - Gestion efficace des formulaires avec React Hook Form
@@ -39,7 +39,8 @@ Ce projet est un boilerplate React moderne créé pour servir comme base pour de
 1. Clonez ce repository
 2. Installez les dépendances avec `npm install`
 3. Lancez le serveur de développement avec `npm start`
-4. Commencez à développer !
+4. Configurez Husky en exécutant `npx husky init`
+5. Commencez à développer !
 
 ## Scripts disponibles
 
@@ -49,6 +50,15 @@ Ce projet est un boilerplate React moderne créé pour servir comme base pour de
 - `npm run lint` : Vérifie le code avec ESLint
 - `npm run format` : Formate le code avec Prettier
 - `npm run storybook` : Lance Storybook pour le développement des composants UI
+
+## Hooks Git
+
+Ce projet utilise Husky et lint-staged pour exécuter des scripts avant chaque commit :
+
+- ESLint vérifie et corrige automatiquement les problèmes de linting dans les fichiers JavaScript et TypeScript.
+- Prettier formate automatiquement les fichiers JavaScript, TypeScript, JSON et Markdown.
+
+Ces vérifications sont exécutées automatiquement avant chaque commit pour assurer la qualité et la cohérence du code.
 
 ## Structure du projet
 
@@ -79,6 +89,8 @@ my-react-boilerplate/
 │   │   ├── en.json
 │   │   └── fr.json
 ├── .storybook/
+├── .husky/
+│   └── pre-commit
 ├── .eslintrc.js
 ├── .prettierrc
 ├── tsconfig.json
